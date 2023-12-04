@@ -45,10 +45,12 @@ class SplashActivity : AppCompatActivity() {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val userType =  snapshot.child("userType").value
 
-                        if (userType == "user"){
+                        //Only available for Admin, so I have interchanged user type here!
+
+                        if (userType == "admin"){
                             startActivity(Intent(this@SplashActivity,DashboardUserActivity::class.java))
                         }
-                        else if (userType == "admin"){
+                        else if (userType == "user"){
                             startActivity(Intent(this@SplashActivity,DashboardAdminActivity::class.java))
                         }
                     }
