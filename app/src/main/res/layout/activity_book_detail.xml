@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back01"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:text="Dashboard Admin"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/titleTv"
+            android:text="abc@example.com"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_logout_white"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back_white"
+            android:layout_alignParentStart="true"/>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bookDataRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl"
+        >
+
+        <ImageView
+            android:id="@+id/bookCoverIv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:id="@+id/bookNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookCoverIv"
+            android:text="BookName"
+            android:layout_marginLeft="20dp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+        <TextView
+
+            android:id="@+id/bookPopTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookNameTv"
+            android:layout_marginLeft="10dp"
+            android:text="Score"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            />
+        <TextView
+            android:id="@+id/bookPop2Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookNameTv"
+            android:drawableEnd="@drawable/ic_pop_red"
+            android:drawablePadding="3dp"
+            android:text="Views"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+
+            android:layout_toRightOf="@id/bookScore"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"/>
+
+        <ImageButton
+            android:id="@+id/boomarkBtn"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_button01"
+            android:src="@drawable/ic_bookmark_white"
+            android:layout_toRightOf="@id/bookCoverIv"
+            android:layout_above="@id/bookDesc"
+            />
+
+
+        <TextView
+            android:id="@+id/bookScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookPopTv"
+            android:text="Popularity"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:drawablePadding="5dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+             />
+        <TextView
+            android:id="@+id/bookScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookPopTv"
+            android:text="Views"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/bookScore"
+            android:textSize="18sp"
+            android:drawableEnd="@drawable/ic_pop_purple"
+            android:drawablePadding="5dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/bookYear"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookScore"
+            android:text="Published"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:drawablePadding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:id="@+id/bookYear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookScore"
+            android:text="Views"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/bookScore"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+
+
+
+        <TextView
+            android:id="@+id/bookDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookYear"
+            android:text="@string/book_desc"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"/>
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

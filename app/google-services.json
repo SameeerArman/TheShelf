@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486169260508",
+    "project_id": "the-shelf-28870",
+    "storage_bucket": "the-shelf-28870.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486169260508:android:59c394ff29bdc732451f19",
+        "android_client_info": {
+          "package_name": "com.sam.theshelf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGBrmnDFurqzLEE0UO959Hgd50cAhKfMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
