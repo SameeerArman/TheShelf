@@ -40,6 +40,7 @@ class AdapterBook :RecyclerView.Adapter<AdapterBook.HolderBook>{
         val image = model.image
         val publishedChapterDate = model.publishedChapterDate
         val uid = model.uid
+        val desc = model.desc
 
         holder.bookNameTv.text = title
         holder.bookPop2Tv.text = score

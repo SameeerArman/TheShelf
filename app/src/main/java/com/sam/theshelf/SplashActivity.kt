@@ -35,7 +35,6 @@ class SplashActivity : AppCompatActivity() {
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-
         }
         else{
             val ref = FirebaseDatabase.getInstance().getReference("Users")
@@ -47,10 +46,10 @@ class SplashActivity : AppCompatActivity() {
 
                         //Only available for Admin, so I have interchanged user type here!
 
-                        if (userType == "admin"){
+                        if (userType == "user"){
                             startActivity(Intent(this@SplashActivity,DashboardUserActivity::class.java))
                         }
-                        else if (userType == "user"){
+                        else if (userType == "admin"){
                             startActivity(Intent(this@SplashActivity,DashboardAdminActivity::class.java))
                         }
                     }

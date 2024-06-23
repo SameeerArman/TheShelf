@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this,"Email doesn't seems right!!! ", Toast.LENGTH_SHORT).show()
         }
         else if (password.isEmpty()){
-            Toast.makeText(this,"No password No Security!!! ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Need Password to Login!!! ", Toast.LENGTH_SHORT).show()
         }
         else {
             loginUser()

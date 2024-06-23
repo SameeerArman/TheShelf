@@ -48,6 +48,7 @@ class BookDetailActivity : AppCompatActivity() {
                 val publishedChapterDate = "${snapshot.child("publishedChapterDate").value}"
                 val score = "${snapshot.child("score").value}"
                 val popularity = "${snapshot.child("popularity").value}"
+                val desc = "${snapshot.child("desc").value}"
                 val image = "${snapshot.child("image").value}"
 
 
@@ -55,6 +56,7 @@ class BookDetailActivity : AppCompatActivity() {
                 binding.bookPop2Tv.text = score
                 binding.bookYear2.text = publishedChapterDate
                 binding.bookScore2.text = popularity
+                binding.bookDesc.text = desc
                 Glide.with(this@BookDetailActivity).load(image).into(binding.bookCoverIv)
             }
 

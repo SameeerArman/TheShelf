@@ -44,7 +44,7 @@
         android:layout_alignParentBottom="true"
         android:textColor="@color/purple_500"
         android:background="@drawable/shape_button02"
-        android:text="Skip Login"
+        android:text="Guest Login"
         android:textAllCaps="true"
         />
 

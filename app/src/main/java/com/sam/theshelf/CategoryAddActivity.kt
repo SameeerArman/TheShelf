@@ -43,6 +43,7 @@ class CategoryAddActivity : AppCompatActivity() {
             binding.bPopEt.setText("")
             binding.bImgEt.setText("")
             binding.bDateEt.setText("")
+            binding.bDescET.setText("")
         }
     }
 
@@ -51,6 +52,8 @@ class CategoryAddActivity : AppCompatActivity() {
     private var bookPop = ""
     private var bookCoverUrl = ""
     private var bookDate = ""
+    private var bookDesc = ""
+
 
 
     private fun validateData() {
@@ -60,6 +63,7 @@ class CategoryAddActivity : AppCompatActivity() {
         bookPop = binding.bPopEt.text.toString().trim()
         bookCoverUrl = binding.bImgEt.text.toString().trim()
         bookDate = binding.bDateEt.text.toString().trim()
+        bookDesc = binding.bDescET.text.toString().trim()
 
         if (bookName.isEmpty()){
             Toast.makeText(this,"Enter Title...",Toast.LENGTH_LONG).show()
@@ -75,6 +79,9 @@ class CategoryAddActivity : AppCompatActivity() {
         }
         if (bookDate.isEmpty()){
             Toast.makeText(this,"Enter Published Date...",Toast.LENGTH_LONG).show()
+            }
+        if (bookDesc.isEmpty()){
+            Toast.makeText(this,"Enter Book Description...",Toast.LENGTH_LONG).show()
         }
         else{
             addCategoryFirebase()
@@ -93,6 +100,7 @@ class CategoryAddActivity : AppCompatActivity() {
         hashMap["image"] = bookCoverUrl
         hashMap["publishedChapterDate"] = bookDate
         hashMap["uid"] = "${firebaseAuth.uid}"
+        hashMap["desc"] = bookDesc
 
         val ref = FirebaseDatabase.getInstance().getReference("BookShelf")
         ref.child("$timestamp")

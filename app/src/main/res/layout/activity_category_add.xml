@@ -144,6 +144,32 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bDescTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/bDateTil"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/bDescET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_category_gray"
+            android:drawablePadding="10dp"
+            android:hint="Description"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/bScoreTil"
@@ -170,18 +196,18 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    
-        <Button
-            android:id="@+id/submitBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bDateTil"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/shape_button01"
-            android:text="Submit"
-            android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bDescTil"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_button01"
+        android:text="Submit"
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>
