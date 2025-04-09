@@ -120,7 +120,7 @@ class RegisterActivity : AppCompatActivity() {
     }
     //Save_to_Database
     private fun udpdateUserInfo() {
-       progressDialog.setMessage("Your data saved...")
+       progressDialog.setMessage("Your data is being saved...")
         val timestamp = System.currentTimeMillis()
 
         val  uid = firebaseAuth.uid
